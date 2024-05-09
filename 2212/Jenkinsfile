@@ -7,9 +7,8 @@ pipeline {
     }
 
     environment {
-        // 본인의 username으로 하실 분은 수정해주세요.
-        DOCKERHUB_USERNAME = '1pro'
-        GITHUB_URL = 'https://github.com/k8s-1pro/kubernetes-anotherclass-sprint2.git'
+        DOCKERHUB_USERNAME = 'seotg'
+        GITHUB_URL = 'https://github.com/tgseo76/kubernetes.git'
 
         // 실습 넘버링
         CLASS_NUM = '2212'
@@ -54,7 +53,7 @@ pipeline {
             steps {
                 // DockerHub로 이미지 업로드
                 script{
-                    if (DOCKERHUB_USERNAME == "1pro") {
+                    if (DOCKERHUB_USERNAME == "seotg") {
                         echo "docker push ${DOCKERHUB_USERNAME}/api-tester:v1.0.0"
                     } else {
                         sh "docker push ${DOCKERHUB_USERNAME}/api-tester:v1.0.0"
